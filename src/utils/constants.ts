@@ -5,6 +5,8 @@ export const COMMANDS = {
   STOP: "!stop",
   SKIP: "!skip",
   VOLUME: "!volume",
+  PLAYLIST_SAVE: "!playlist-save",
+  PLAYLIST: "!playlist",
 };
 
 export const INTENTS = [

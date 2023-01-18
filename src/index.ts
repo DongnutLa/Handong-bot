@@ -5,6 +5,7 @@ import { queue } from "./functions";
 import { QueueContract } from "./interfaces";
 import { INTENTS, PREFIX, COMMANDS } from "./utils/constants";
 import { actions } from "./utils/actions";
+import { connectDb } from "./db";
 dotenv.config();
 
 const token = process.env.TOKEN;
@@ -17,8 +18,15 @@ const client = new Client({
 client.login(token);
 
 // Add listeners
-client.once("ready", () => {
+client.once("ready", async () => {
   console.log("Ready!");
+  try {
+    await connectDb();
+    console.log("Conectado a la base de datos!");
+  } catch (error) {
+    console.error(error);
+    throw new Error(error);
+  }
 });
 client.once("reconnecting", () => {
   console.log("Reconnecting!");

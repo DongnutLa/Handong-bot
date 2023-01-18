@@ -1,10 +1,11 @@
 {
   "dependencies": {
-    "discord.js": "^14.7.1",
     "@discordjs/opus": "discordjs/opus",
     "@discordjs/voice": "^0.14.0",
+    "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
     "libsodium-wrappers": "^0.7.10",
+    "mongoose": "^6.8.3",
     "play-dl": "^1.9.6",
     "typescript": "^4.9.4"
   },
